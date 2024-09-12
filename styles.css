@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+    /* Unveil text on scroll */
+    .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+  
+      /* Hover effects */
+      .hover-effect:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      .hover-effect:hover .hover-title {
+        color: #1d4ed8; /* Tailwind's blue-700 color */
+      }
+  
+      /* Hero section hover effect */
+      .hero-section {
+        transition: transform 0.6s ease, box-shadow 0.6s ease;
+      }
+      .hero-section:hover {
+        transform: scale(1.05); /* Scale up the hero section */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhance the shadow for depth */
+      }
