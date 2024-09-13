@@ -589,6 +589,10 @@ video {
   margin-bottom: 1.25rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -886,6 +890,56 @@ video {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   /* Enhance the shadow for depth */
   background-color: #cfe2f3;
+}
+
+/* Create a glowing effect and sparks around the image */
+
+.glowing-image {
+  position: relative;
+  box-shadow: 0 0 20px 5px rgba(0, 170, 255, 0.7), 0 0 50px 15px rgba(0, 170, 255, 0.4);
+  animation: glow 2s infinite ease-in-out;
+}
+
+/* Define the glowing and sparking animation */
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px 2px rgba(0, 170, 255, 0.6), 0 0 30px 10px rgba(0, 170, 255, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 25px 8px rgba(0, 170, 255, 1), 0 0 60px 25px rgba(0, 170, 255, 0.6);
+  }
+
+  100% {
+    box-shadow: 0 0 10px 2px rgba(0, 170, 255, 0.6), 0 0 30px 10px rgba(0, 170, 255, 0.3);
+  }
+}
+
+.project-card {
+  text-align: center;
+  /* Center the title, text, and link */
+}
+
+.image-projects {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* Ensure the image covers the area and maintains aspect ratio */
+  border-radius: 8px;
+  /* Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Adds a soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth transition */
+}
+
+.image-projects:hover {
+  transform: scale(1.05);
+  /* Slight zoom on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Deepens shadow on hover */
 }
 
 .hover\:bg-blue-700:hover {
